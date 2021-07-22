@@ -1,0 +1,131 @@
+<html>
+<head>
+<style>
+body  {
+  background-image: {{url_for('static',filename = 'images/Background.jpg')}};;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+* {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+
+
+        }
+
+     
+
+        form {
+            display: flex;
+            height: 85vh;
+            justify-content: center;
+            align-items: center;
+            margin-top: -150px;
+            width: 60%;
+            text-align: center;
+			margin-left:300px;
+            
+        }
+
+
+        .details h2 {
+            
+            position: relative;
+            top: 100px;
+            margin: auto;
+            color: rgb(18, 231, 231);
+            font-size: 3rem;
+        }
+
+        label:hover {
+            transform: scale(1.03);
+        }
+
+        .details h2 {
+            /* margin-bottom: 300px; */
+            position: relative;
+            top: 100px;
+            margin: auto;
+            color: rgb(18, 231, 231);
+            font-size: 3rem;
+
+        }
+
+      
+
+
+        .details h1 {
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: rgb(8, 8, 8);
+        }
+
+
+        .upload {
+
+            font-size: 20px;
+            background-color: rgb(255, 252, 252);
+            border-radius: 20px;
+            outline: none;
+            width: 500px;
+            color: rgb(0, 0, 0);
+            border: 3px solid rgb(45, 47, 49);
+
+
+
+        }
+
+        ::-webkit-file-upload-button {
+            color: rgb(255, 252, 252);
+            padding: 20px;
+            border: 2px solid rgb(201, 6, 6);
+            background-color: rgb(201, 6, 6);
+            border-radius: 15px;
+
+        }
+
+        ::-webkit-file-upload-button:hover {
+            border-radius: 20px;
+            border: 2px solid rgb(177, 174, 174);
+
+
+        }
+
+
+
+        input[type="submit"] {
+            position: absolute;
+            margin-top: 200px;
+            padding: 15px 35px;
+            background-color: rgb(31, 185, 190);
+            border-radius: 15px;
+            color: black;
+            font-size: 1.5rem;
+            border: 4px solid rgb(31, 185, 190);
+        }
+</style>
+</head>
+<body background="{{url_for('static',filename = 'images/Background.jpg')}}">
+	  <h1 style="text-align:center;font-size:4rem">Predict Tomato Leaf Disease & Get Cure</h1>
+<section>
+        
+        
+            
+            
+
+     
+            <form action="/predict" method="post" enctype="multipart/form-data" onsubmit="showloading()">
+
+                <input type="file" name="image" class="upload">
+				<br>
+				<br>
+                <input type="submit" value="Predict">
+
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>

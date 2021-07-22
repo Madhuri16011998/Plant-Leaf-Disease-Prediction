@@ -1,0 +1,19 @@
+Flask==2.0.1
+itsdangerous==2.0.1
+Jinja2==3.0.1
+pip install Keras-Preprocessing==1.1.2
+matplotlib==3.4.0
+matplotlib-inline==0.1.2
+MarkupSafe==2.0.1
+numpy==1.19.4
+scikit-learn==0.24.1
+scipy==1.6.2
+sklearn==0.0
+streamlit==0.73.1
+tensorboard==2.4.1
+tensorboard-plugin-wit==1.8.0
+tensorflow==2.4.1
+tensorflow-estimator==2.4.0
+Werkzeug==2.0.1
+numpy==1.19.4
+pandas==1.2.0

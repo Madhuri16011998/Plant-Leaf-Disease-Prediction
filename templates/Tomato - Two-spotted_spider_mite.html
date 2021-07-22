@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+    <title>TOMATO LEAF DISEASE PREDICTION</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .border img {
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+		
+    </style>
+</head>
+
+<body background="{{url_for('static',filename = 'images/Back.jpg')}}">
+
+
+
+    <div>
+        <h1 style="text-align:center;font-size:4rem">Predict Tomato Leaf Disease & Get Cure</h1>
+    </div>
+
+   <br>
+   <br>
+
+
+    <div class="container my-2">
+        <div class="row mb-5">
+
+            <div class="col-sm" style="margin-bottom: 23px;">
+                <span class="border border-primary">
+                    <img src="{{url_for('static',filename = 'images/Tomato___Spider_mites .JPG' )}}" alt="User Image" style="width:500px;height:500px;">
+                    
+
+                </span>
+            </div>
+
+            <div class="col-sm">
+
+                <div>
+                    <h1 style="padding: 15px; background-color: rgb(15, 15, 15); color: white;"
+                        class="text-center mb-5 content-h1 rounded">
+                        {{pred_output}} </h1>
+                </div>
+                <div class="details">
+					
+					<h4><b> Treatment : </b> </h4>
+                    <h6>
+						For control, use selective products whenever possible. Selective products which have worked well in the field include:
+
+bifenazate (Acramite): Group UN, a long residual nerve poison
+abamectin (Agri-Mek): Group 6, derived from a soil bacterium
+spirotetramat (Movento): Group 23, mainly affects immature stages
+spiromesifen (Oberon 2SC): Group 23, mainly affects immature stages
+OMRI-listed products include:
+
+insecticidal soap (M-Pede)
+neem oil (Trilogy)
+soybean oil (Golden Pest Spray Oil)
+With most miticides (excluding bifenazate), make 2 applications, approximately 5-7 days apart, to help control immature mites that were in the egg stage and protected during the first application. Alternate between products after 2 applications to help prevent or delay resistance.
+                    </h6>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+    <title>TOMATO LEAF DISEASE PREDICTION</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .border img {
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+		
+    </style>
+</head>
+
+<body background="{{url_for('static',filename = 'images/Back.jpg')}}">
+
+
+
+    <div>
+        <h1 style="text-align:center;font-size:4rem">Predict Tomato Leaf Disease & Get Cure</h1>
+    </div>
+
+   <br>
+   <br>
+
+
+    <div class="container my-2">
+        <div class="row mb-5">
+
+            <div class="col-sm" style="margin-bottom: 23px;">
+                <span class="border border-primary">
+                    <img src="{{url_for('static',filename = 'images/Tomato___Tomato_mosaic_virus.JPG' )}}" alt="User Image" style="width:500px;height:500px;">
+                    
+
+                </span>
+            </div>
+
+            <div class="col-sm">
+
+                <div>
+                    <h1 style="padding: 15px; background-color: rgb(15, 15, 15); color: white;"
+                        class="text-center mb-5 content-h1 rounded">
+                        {{pred_output}} </h1>
+                </div>
+                <div class="details">
+					
+					<h4><b> Treatment : </b> </h4>
+                    <h6>
+
+					There are no cures for viral diseases such as mosaic once a plant is infected. As a result, every effort should be made to prevent the disease from entering your garden.
+					<br>
+1.Fungicides will NOT treat this viral disease.
+<br>
+2.Plant resistant varieties when available or purchase transplants from a reputable source.
+<br>
+3.Do NOT save seed from infected crops.
+<br>
+4.Spot treat with least-toxic, natural pest control products, such as Safer Soap, Bon-Neem and diatomaceous earth, to reduce the number of disease carrying insects.
+<br>
+5.Harvest-Guard® row cover will help keep insect pests off vulnerable crops/ transplants and should be installed until bloom.
+<br>
+6.Remove all perennial weeds, using least-toxic herbicides, within 100 yards of your garden plot.
+<br>
+7.The virus can be spread through human activity, tools and equipment. Frequently wash your hands and disinfect garden tools, stakes, ties, pots, greenhouse benches, etc. (one part bleach to 4 parts water) to reduce the risk of contamination.
+<br>
+8.Avoid working in the garden during damp conditions (viruses are easily spread when plants are wet).
+<br>
+9.Avoid using tobacco around susceptible plants. Cigarettes and other tobacco products may be infected and can spread the virus.
+<br>
+10.Remove and destroy all infected plants (see Fall Garden Cleanup). Do NOT compost.
+<br>
+                    </h6>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
