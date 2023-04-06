@@ -57,7 +57,7 @@ labels = (training_set.class_indices)
 print(labels)
 
 
-classifier.fit_generator(training_set,
+history = classifier.fit_generator(training_set,
                          steps_per_epoch = 20,
                          epochs = 50,
                          validation_data=valid_set
@@ -71,6 +71,26 @@ with open("model1.json", "w") as json_file:
     classifier.save_weights("my_model_weights.h5")
     classifier.save("model.h5")
     print("Saved model to disk")
+
+#Plotting accuracy and loss function graphs
+import matplotlib.pyplot as plt
+
+# summarize history for accuracy
+plt.plot(history.history['accuracy'])
+plt.plot(history.history['val_accuracy'])
+plt.title('model accuracy')
+plt.ylabel('accuracy')
+plt.xlabel('epoch')
+plt.legend(['Train', 'Validation'], loc='upper left')
+plt.show()
+# summarize history for loss
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.title('model loss')
+plt.ylabel('loss')
+plt.xlabel('epoch')
+plt.legend(['Train', 'Validation'], loc='upper left')
+plt.show()     
 
 '''
 import cv2
